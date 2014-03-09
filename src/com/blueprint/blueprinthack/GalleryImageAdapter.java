@@ -11,11 +11,14 @@ public class GalleryImageAdapter extends BaseAdapter
 {
     private Context mContext;
     private int[] petImages;
+    private int width, height;
 
-    public GalleryImageAdapter(Context context, int[] photos) 
+    public GalleryImageAdapter(Context context, int[] photos, int w, int h) 
     {
         mContext = context;
         petImages = photos;
+        width = w;
+        height = h;
     }
 
     public int getCount() {
@@ -38,7 +41,7 @@ public class GalleryImageAdapter extends BaseAdapter
         ImageView i = new ImageView(mContext);
 
         i.setImageResource(petImages[index]);
-        i.setLayoutParams(new Gallery.LayoutParams(200, 200));
+        i.setLayoutParams(new Gallery.LayoutParams(width, width));
     
         i.setScaleType(ImageView.ScaleType.FIT_XY);
 
