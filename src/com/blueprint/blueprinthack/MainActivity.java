@@ -21,8 +21,9 @@ public class MainActivity extends Activity {
 
 	Context c;
     private int[] pet1photos = { R.drawable.pet_dog_1, R.drawable.pet_dog_2, R.drawable.pet_dog_3, R.drawable.pet_dog_1, R.drawable.pet_dog_2 };
+    private int[] pet2photos = { R.drawable.pet_rabbit_1, R.drawable.pet_rabbit_2, R.drawable.pet_rabbit_3, R.drawable.pet_rabbit_1, R.drawable.pet_rabbit_2 };
     Shelter shelter1, shelter2, shelter3, shelter4, shelter5;
-    Pet dog1, dog2, dog3;
+    Pet dog1, dog2, dog3, dog4, dog5, dog6, pet1, pet2, pet3, pet4, pet5, pet6;
     Pet cat, rabbit;
     private ArrayList<Pet> allPets = new ArrayList<Pet>();
     private ArrayList<Pet> dogs = new ArrayList<Pet>();
@@ -56,23 +57,37 @@ public class MainActivity extends Activity {
         		getResources().getString(R.string.phone5));
         
         dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.pet_dog1, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        dog2 = new Pet("dog 2", shelter1, 3, pet1photos, R.drawable.pet_dog2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        dog3 = new Pet("dog 2", shelter1, 1, pet1photos, R.drawable.pet_dog3, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        
+        dog2 = new Pet("dog 2", shelter2, 3, pet1photos, R.drawable.pet_dog2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog3 = new Pet("dog 2", shelter3, 1, pet1photos, R.drawable.pet_dog3, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog4 = new Pet("pet 1", shelter4, 2, pet1photos, R.drawable.pet_dog4, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog5 = new Pet("dog 2", shelter5, 3, pet1photos, R.drawable.pet_dog5, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog6 = new Pet("dog 2", shelter1, 1, pet1photos, R.drawable.pet_dog6, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet1 = new Pet("pet 1", shelter2, 2, pet2photos, R.drawable.pet_1, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet2 = new Pet("dog 2", shelter3, 3, pet1photos, R.drawable.pet_2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet3 = new Pet("dog 2", shelter4, 1, pet1photos, R.drawable.pet_3, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet4 = new Pet("pet 1", shelter5, 2, pet1photos, R.drawable.pet_4, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet5 = new Pet("dog 2", shelter1, 3, pet1photos, R.drawable.pet_5, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet6 = new Pet("dog 2", shelter2, 1, pet1photos, R.drawable.pet_6, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
         
         //Add the pets and dogs here
+        allPets.add(pet1);
         allPets.add(dog1);
+        allPets.add(pet2);
+        allPets.add(pet6);
+        allPets.add(pet3);
         allPets.add(dog2);
+        allPets.add(dog5);
+        allPets.add(pet4);
         allPets.add(dog3);
-        allPets.add(dog1);
-        allPets.add(dog2);
-        allPets.add(dog3);
-        allPets.add(dog1);
-        allPets.add(dog2);
-        allPets.add(dog3);
+        allPets.add(dog4);
+        allPets.add(dog6);
+        allPets.add(pet5);
         dogs.add(dog1);
         dogs.add(dog2);
         dogs.add(dog3);
+        dogs.add(dog4);
+        dogs.add(dog5);
+        dogs.add(dog6);
         
         GridView gridview = (GridView) findViewById(R.id.gridview);
         Pet[] allPetsArray = new Pet[allPets.size()];
