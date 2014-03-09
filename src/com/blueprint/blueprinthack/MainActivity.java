@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 
 	Context c;
     private int[] pet1photos = { R.drawable.pet_dog_1, R.drawable.pet_dog_2, R.drawable.pet_dog_3, R.drawable.pet_dog_1, R.drawable.pet_dog_2 };
-    Shelter shelter1;
+    Shelter shelter1, shelter2, shelter3, shelter4, shelter5;
     Pet dog1, dog2, dog3;
     Pet cat, rabbit;
     private ArrayList<Pet> allPets = new ArrayList<Pet>();
@@ -39,7 +39,21 @@ public class MainActivity extends Activity {
         display.getSize(size);
         width = size.x;
 
-        shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
+        shelter1 = new Shelter(getResources().getString(R.string.shelter1), getResources().getString(R.string.address1), 
+        		getResources().getString(R.string.hours1), getResources().getString(R.string.email1),
+        		getResources().getString(R.string.phone1));
+        shelter2 = new Shelter(getResources().getString(R.string.shelter2), getResources().getString(R.string.address2), 
+        		getResources().getString(R.string.hours2), getResources().getString(R.string.email2),
+        		getResources().getString(R.string.phone2));
+        shelter3 = new Shelter(getResources().getString(R.string.shelter3), getResources().getString(R.string.address3), 
+        		getResources().getString(R.string.hours3), getResources().getString(R.string.email3),
+        		getResources().getString(R.string.phone3));
+        shelter4 = new Shelter(getResources().getString(R.string.shelter4), getResources().getString(R.string.address4), 
+        		getResources().getString(R.string.hours4), getResources().getString(R.string.email4),
+        		getResources().getString(R.string.phone4));
+        shelter5 = new Shelter(getResources().getString(R.string.shelter5), getResources().getString(R.string.address5), 
+        		getResources().getString(R.string.hours5), getResources().getString(R.string.email5),
+        		getResources().getString(R.string.phone5));
         
         dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.pet_dog1, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
         dog2 = new Pet("dog 2", shelter1, 3, pet1photos, R.drawable.pet_dog2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
