@@ -1,6 +1,5 @@
 package com.blueprint.blueprinthack;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
@@ -15,7 +14,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.SearchView;
-import android.widget.Toast;
 import com.facebook.Session;
 
 import java.util.ArrayList;
@@ -165,7 +163,7 @@ public class MainActivity extends Activity {
 	    SearchView searchView =
 	            (SearchView) menu.findItem(R.id.action_search).getActionView();
 	    searchView.setSearchableInfo(
-	            searchManager.getSearchableInfo(getComponentName()));
+                searchManager.getSearchableInfo(getComponentName()));
 		return true;
 	}
 
@@ -173,13 +171,15 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item){
         Intent i;
         switch(item.getItemId()){
-            case(R.id.action_login):
-                i = new Intent(this,LoginActivity.class);
-                this.startActivity(i);
-                break;
+//            case(R.id.action_login):
+//                i = new Intent(this,LoginActivity.class);
+//                this.startActivity(i);
+//                break;
             case(R.id.action_logout):
                 Session session = Session.getActiveSession();
-                session.closeAndClearTokenInformation();
+                if(session != null){
+                    session.closeAndClearTokenInformation();
+                }
                 i = new Intent(this, LoginActivity.class);
                 this.startActivity(i);
                 break;
@@ -188,4 +188,15 @@ public class MainActivity extends Activity {
         }
         return true;
     }
+      
+    @Override
+    public void onPause(){
+//        Session session = Session.getActiveSession();
+//        if(session == null){
+//            Intent i = new Intent(this, LoginActivity.class);
+//            this.startActivity(i);
+//        }
+        super.onPause();
+    }
+
 }
