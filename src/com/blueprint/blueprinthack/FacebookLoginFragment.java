@@ -66,12 +66,14 @@ public class FacebookLoginFragment extends Fragment {
                 (session.isOpened() || session.isClosed()) ) {
             onSessionStateChange(session, session.getState(), null);
         }
-
+        System.out.println("before");
         uiHelper.onResume();
         if (isLoggedIn()){
             Intent i = new Intent(getActivity(), MainActivity.class);
+            System.out.println("after");
             this.startActivity(i);
         }
+        
     }
 
     @Override
