@@ -42,6 +42,10 @@ public class ShelterActivity  extends Activity {
         Bundle b = getIntent().getExtras();
         Shelter s = b.getParcelable("shelter");
 
+        if(s==null){
+        	System.out.println("s is null");
+        }
+
         name_text = (TextView) findViewById(R.id.name);
         name_text.setText(s.getName());
         address = (TextView) findViewById(R.id.address);

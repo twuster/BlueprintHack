@@ -19,6 +19,10 @@ public class Shelter implements Parcelable {
 		this.email = email;
 		this.phone = phone;
 	}
+	
+	public Shelter(Parcel in) { 
+		readFromParcel(in); 
+	}
 
 	
 	public String getName(){
@@ -48,16 +52,28 @@ public class Shelter implements Parcelable {
 	}
 
 	@Override
-	public void writeToParcel(Parcel arg0, int arg1) {
-		// TODO Auto-generated method stub
+	public void writeToParcel(Parcel dest, int flags) {
+		dest.writeString(name);
+		dest.writeString(address); 
+		dest.writeString(hours); 
+		dest.writeString(email); 
+		dest.writeString(phone); 	
+	}
+	
+	private void readFromParcel(Parcel in) {
+		name = in.readString(); 
+		address = in.readString();
+		hours = in.readString();
+		email = in.readString();
+		phone = in.readString();
 	}
 	
 	public static final Parcelable.Creator CREATOR = new Parcelable.Creator() { 
-		public Pet createFromParcel(Parcel in) { 
-			return new Pet(in); 
+		public Shelter createFromParcel(Parcel in) { 
+			return new Shelter(in); 
 		}   
-		public Pet[] newArray(int size) { 
-			return new Pet[size]; 
+		public Shelter[] newArray(int size) { 
+			return new Shelter[size]; 
 		} 
 	};
 

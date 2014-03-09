@@ -197,7 +197,7 @@ containing a value of this type.
         public static final int com_facebook_list_section_header_background=0x7f02000e;
         public static final int com_facebook_loginbutton_silver=0x7f02000f;
         public static final int com_facebook_logo=0x7f020010;
-        public static final int com_facebook_picker_default_separator_color=0x7f020039;
+        public static final int com_facebook_picker_default_separator_color=0x7f020035;
         public static final int com_facebook_picker_item_background=0x7f020011;
         public static final int com_facebook_picker_list_focused=0x7f020012;
         public static final int com_facebook_picker_list_longpressed=0x7f020013;
@@ -214,36 +214,34 @@ containing a value of this type.
         public static final int com_facebook_top_background=0x7f02001e;
         public static final int com_facebook_top_button=0x7f02001f;
         public static final int com_facebook_usersettingsfragment_background_gradient=0x7f020020;
-        public static final int ic_launcher=0x7f020021;
-        public static final int pet_1=0x7f020022;
-        public static final int pet_2=0x7f020023;
-        public static final int pet_3=0x7f020024;
-        public static final int pet_4=0x7f020025;
-        public static final int pet_5=0x7f020026;
-        public static final int pet_6=0x7f020027;
-        public static final int pet_dog1=0x7f020028;
-        public static final int pet_dog2=0x7f020029;
-        public static final int pet_dog3=0x7f02002a;
-        public static final int pet_dog4=0x7f02002b;
-        public static final int pet_dog5=0x7f02002c;
-        public static final int pet_dog6=0x7f02002d;
-        public static final int pet_dog_1=0x7f02002e;
-        public static final int pet_dog_2=0x7f02002f;
-        public static final int pet_dog_3=0x7f020030;
-        public static final int sample_0=0x7f020031;
-        public static final int sample_1=0x7f020032;
-        public static final int sample_2=0x7f020033;
-        public static final int sample_3=0x7f020034;
-        public static final int sample_4=0x7f020035;
-        public static final int sample_5=0x7f020036;
-        public static final int sample_6=0x7f020037;
-        public static final int sample_7=0x7f020038;
+        public static final int friend_title=0x7f020021;
+        public static final int ic_launcher=0x7f020022;
+        public static final int pet_1=0x7f020023;
+        public static final int pet_2=0x7f020024;
+        public static final int pet_3=0x7f020025;
+        public static final int pet_4=0x7f020026;
+        public static final int pet_5=0x7f020027;
+        public static final int pet_6=0x7f020028;
+        public static final int pet_dog1=0x7f020029;
+        public static final int pet_dog2=0x7f02002a;
+        public static final int pet_dog3=0x7f02002b;
+        public static final int pet_dog4=0x7f02002c;
+        public static final int pet_dog5=0x7f02002d;
+        public static final int pet_dog6=0x7f02002e;
+        public static final int pet_dog_1=0x7f02002f;
+        public static final int pet_dog_2=0x7f020030;
+        public static final int pet_dog_3=0x7f020031;
+        public static final int pet_rabbit_1=0x7f020032;
+        public static final int pet_rabbit_2=0x7f020033;
+        public static final int pet_rabbit_3=0x7f020034;
     }
     public static final class id {
-        public static final int action_adopt=0x7f050029;
-        public static final int action_login=0x7f050027;
-        public static final int action_logout=0x7f050028;
-        public static final int action_search=0x7f050026;
+        public static final int action_adopt=0x7f050033;
+        public static final int action_login=0x7f050031;
+        public static final int action_logout=0x7f050032;
+        public static final int action_search=0x7f050030;
+        public static final int address=0x7f050027;
+        public static final int address_field=0x7f050028;
         public static final int authButton=0x7f050018;
         public static final int com_facebook_login_activity_progress_bar=0x7f050005;
         public static final int com_facebook_picker_activity_circle=0x7f050004;
@@ -265,19 +263,27 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_login_button=0x7f050017;
         public static final int com_facebook_usersettingsfragment_logo_image=0x7f050015;
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f050016;
+        public static final int contact=0x7f05002b;
+        public static final int contact_email=0x7f05002d;
+        public static final int contact_phone=0x7f05002c;
         public static final int content=0x7f05001b;
+        public static final int directions_button=0x7f050026;
+        public static final int fb_button=0x7f05002e;
         public static final int gridview=0x7f05001e;
+        public static final int hours=0x7f050029;
+        public static final int hours_field=0x7f05002a;
+        public static final int imageView1=0x7f05001d;
         public static final int large=0x7f050002;
         public static final int logo=0x7f050019;
+        public static final int name=0x7f050025;
         public static final int normal=0x7f050001;
         public static final int pet_gallery=0x7f05001f;
-        public static final int pet_video=0x7f050025;
+        public static final int pet_video=0x7f05002f;
         public static final int picker_subtitle=0x7f050012;
         public static final int play_video=0x7f050024;
         public static final int root_layout=0x7f05001c;
         public static final int scrollView1=0x7f050020;
         public static final int small=0x7f050000;
-        public static final int textView1=0x7f05001d;
         public static final int title=0x7f05001a;
         public static final int tvAge=0x7f050023;
         public static final int tvBreed=0x7f050021;
@@ -317,6 +323,11 @@ containing a value of this type.
         public static final int action_login=0x7f08001b;
         public static final int action_logout=0x7f08001c;
         public static final int action_search=0x7f08001a;
+        public static final int address1=0x7f080020;
+        public static final int address2=0x7f080025;
+        public static final int address3=0x7f08002a;
+        public static final int address4=0x7f08002f;
+        public static final int address5=0x7f080034;
         public static final int app_id=0x7f08001d;
         public static final int app_name=0x7f080019;
         public static final int com_facebook_choose_friends=0x7f08000f;
@@ -344,18 +355,31 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_log_in_button=0x7f080008;
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f080009;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f08000a;
+        public static final int email1=0x7f080022;
+        public static final int email2=0x7f080027;
+        public static final int email3=0x7f08002c;
+        public static final int email4=0x7f080031;
+        public static final int email5=0x7f080036;
+        public static final int hours1=0x7f080021;
+        public static final int hours2=0x7f080026;
+        public static final int hours3=0x7f08002b;
+        public static final int hours4=0x7f080030;
+        public static final int hours5=0x7f080035;
+        public static final int phone1=0x7f080023;
+        public static final int phone2=0x7f080028;
+        public static final int phone3=0x7f08002d;
+        public static final int phone4=0x7f080032;
+        public static final int phone5=0x7f080037;
+        /** Shelter List
+         */
+        public static final int shelter1=0x7f08001f;
+        public static final int shelter2=0x7f080024;
+        public static final int shelter3=0x7f080029;
+        public static final int shelter4=0x7f08002e;
+        public static final int shelter5=0x7f080033;
     }
     public static final class style {
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v11/styles.xml on API 14+ devices.
@@ -363,12 +387,9 @@ containing a value of this type.
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f090002;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static final int AppTheme=0x7f090003;
         public static final int BlackTextBold=0x7f090004;
         public static final int DarkGrayText=0x7f090005;
+        public static final int MyActionBar=0x7f090003;
         public static final int com_facebook_loginview_default_style=0x7f090000;
         public static final int com_facebook_loginview_silver_style=0x7f090001;
     }

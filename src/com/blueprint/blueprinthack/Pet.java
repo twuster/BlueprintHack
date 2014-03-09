@@ -49,7 +49,6 @@ public class Pet implements Parcelable {
 		breed = in.readString(); 
 		shelter = (Shelter)in.readParcelable(Shelter.class.getClassLoader());
 		age = in.readInt();
-		//in.readIntArray(photos);
 		photos = in.createIntArray();
 		profilePhoto = in.readInt();
 		videoURI = in.readString();
