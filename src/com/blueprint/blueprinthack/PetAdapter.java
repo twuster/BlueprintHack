@@ -9,13 +9,15 @@ import android.widget.ImageView;
 
 public class PetAdapter extends BaseAdapter {
 	private Context mContext;
+	private Pet[] petImages;
 
-	public PetAdapter(Context c) {
+	public PetAdapter(Context c, Pet[] pi) {
 		mContext = c;
+		petImages = pi;
 	}
 
 	public int getCount() {
-		return mThumbIds.length;
+		return petImages.length;
 	}
 
 	public Object getItem(int position) {
@@ -40,7 +42,7 @@ public class PetAdapter extends BaseAdapter {
 			imageView = (ImageView) convertView;
 		}
 
-		imageView.setImageResource(mThumbIds[position]);
+		imageView.setImageResource(petImages[position].getProfilePhoto());
 		return imageView;
 	}
 

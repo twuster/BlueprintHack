@@ -1,6 +1,9 @@
 package com.blueprint.blueprinthack;
 
-public class Shelter {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Shelter implements Parcelable {
 	
 	private String name;
 	private String address;
@@ -15,5 +18,45 @@ public class Shelter {
 		this.email = email;
 		this.phone = phone;
 	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public String getAddress(){
+		return address;
+	}
+	
+	public String getHours(){
+		return hours;
+	}
+	
+	public String getEmail(){
+		return email;
+	}
+	
+	public String getPhone(){
+		return phone;
+	}
+
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel arg0, int arg1) {
+		// TODO Auto-generated method stub
+	}
+	
+	public static final Parcelable.Creator CREATOR = new Parcelable.Creator() { 
+		public Pet createFromParcel(Parcel in) { 
+			return new Pet(in); 
+		}   
+		public Pet[] newArray(int size) { 
+			return new Pet[size]; 
+		} 
+	};
 
 }

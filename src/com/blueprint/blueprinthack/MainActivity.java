@@ -1,6 +1,7 @@
 package com.blueprint.blueprinthack;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -19,11 +20,15 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
         
         GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new PetAdapter(this));
+        gridview.setAdapter(new PetAdapter(this, allPets));
 
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+                
+                Intent openPetInfo = new Intent("com.blueprint.blueprinthack.PetInfoActivity");
+                openPetInfo.putExtra("pet", allPets[position]);
+                startActivity(openPetInfo);
             }
         });
     }
@@ -34,4 +39,13 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+    
+    private int[] pet1photos = { R.drawable.sample_2, R.drawable.sample_3, R.drawable.sample_4 };
+    Shelter shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
+    Pet dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.sample_1, "android.resource://" + getPackageName() + "/" 
+    		+ R.raw.dog_video);
+    private Pet[] allPets = {dog1, dog1, dog1, dog1};
+    private Pet[] dogs = {};
+    
+    
 }
