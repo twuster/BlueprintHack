@@ -39,11 +39,13 @@ public class MainActivity extends Activity {
         display.getSize(size);
         width = size.x;
 
+        shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
+        
         dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.pet_dog1, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
         dog2 = new Pet("dog 2", shelter1, 3, pet1photos, R.drawable.pet_dog2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
         dog3 = new Pet("dog 2", shelter1, 1, pet1photos, R.drawable.pet_dog3, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
         
-        shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
+        
         //Add the pets and dogs here
         allPets.add(dog1);
         allPets.add(dog2);

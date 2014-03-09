@@ -94,7 +94,7 @@ public class PetInfoActivity extends Activity {
         Intent i;
         switch(item.getItemId()){
             case(R.id.action_adopt):
-            	Intent openShelterInfo = new Intent(c, PetInfoActivity.class);
+            	Intent openShelterInfo = new Intent(c, ShelterActivity.class);
             	openShelterInfo.putExtra("shelter", pet.getShelter());
             	startActivity(openShelterInfo);
                 break;
