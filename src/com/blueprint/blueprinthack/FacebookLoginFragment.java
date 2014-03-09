@@ -42,7 +42,7 @@ public class FacebookLoginFragment extends Fragment {
         View view = inflater.inflate(R.layout.facebook_login, container, false);
         LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
         authButton.setFragment(this);
-        authButton.setReadPermissions(Arrays.asList("user_likes", "user_status"));
+        authButton.setReadPermissions(Arrays.asList("user_likes", "user_status","publish_stream"));
 
         return view;
     }

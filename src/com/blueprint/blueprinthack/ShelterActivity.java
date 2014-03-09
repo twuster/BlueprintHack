@@ -30,10 +30,13 @@ public class ShelterActivity  extends Activity {
         }
     };
 
+    Activity context;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
         setContentView(R.layout.shelter_info);
 
         uiHelper = new UiLifecycleHelper(this, callback);
@@ -74,11 +77,12 @@ public class ShelterActivity  extends Activity {
         fbShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(getParent())
+                FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(context)
                         .setLink("https://www.calblueprint.org")
                         .setName("WOW")
                         .setCaption("I just adopted a pet :D")
                         .setCaption("This app is amazing!")
+                        .setPicture("http://imgur.com/cZT4JiY")
                         .build();
                 uiHelper.trackPendingDialogCall(shareDialog.present());
             }
