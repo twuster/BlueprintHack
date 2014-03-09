@@ -4,5 +4,9 @@
         android:id="@+id/action_search"
         android:showAsAction="always"
         android:title="@string/action_search"/>
+    <item
+        android:id="@+id/action_login"
+        android:showAsAction="always"
+        android:title="@string/action_login"/>
 
 </menu>
