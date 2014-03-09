@@ -12,7 +12,15 @@ import android.widget.GridView;
 import android.widget.Toast;
 import com.facebook.Session;
 
+import java.util.ArrayList;
+
 public class MainActivity extends Activity {
+
+    private int[] pet1photos = { R.drawable.sample_2, R.drawable.sample_3, R.drawable.sample_4 };
+    Shelter shelter1;
+    Pet dog1;
+    private ArrayList<Pet> allPets = new ArrayList<Pet>();
+    private ArrayList<Pet> dogs = new ArrayList<Pet>();
     /**
      * Called when the activity is first created.
      */
@@ -20,19 +28,27 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.sample_1, "android.resource://" + getPackageName() + "/"
+                + R.raw.dog_video);
+        shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
+        //Add the pets and dogs here
+        allPets.add(dog1);
+        dogs.add(dog1);
         
         GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new PetAdapter(this, allPets));
+        gridview.setAdapter(new PetAdapter(this, (Pet[])allPets.toArray()));
 
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
                 
                 Intent openPetInfo = new Intent("com.blueprint.blueprinthack.PetInfoActivity");
-                openPetInfo.putExtra("pet", allPets[position]);
+                openPetInfo.putExtra("pet", allPets.get(position));
                 startActivity(openPetInfo);
             }
         });
+
     }
     
     @Override
@@ -42,12 +58,6 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-    private int[] pet1photos = { R.drawable.sample_2, R.drawable.sample_3, R.drawable.sample_4 };
-    Shelter shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
-    Pet dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.sample_1, "android.resource://" + getPackageName() + "/" 
-    		+ R.raw.dog_video);
-    private Pet[] allPets = {dog1, dog1, dog1, dog1};
-    private Pet[] dogs = {};
 
 
     @Override
