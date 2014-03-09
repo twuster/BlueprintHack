@@ -29,6 +29,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.sample_1, "android.resource://" + getPackageName() + "/"
+                + R.raw.dog_video);
+        shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
+        //Add the pets and dogs here
+        allPets.add(dog1);
+        dogs.add(dog1);
+        
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new PetAdapter(this, (Pet[])allPets.toArray()));
 
@@ -41,12 +48,7 @@ public class MainActivity extends Activity {
                 startActivity(openPetInfo);
             }
         });
-        dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.sample_1, "android.resource://" + getPackageName() + "/"
-                + R.raw.dog_video);
-        shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
-        //Add the pets and dogs here
-        allPets.add(dog1);
-        dogs.add(dog1);
+
     }
     
     @Override
