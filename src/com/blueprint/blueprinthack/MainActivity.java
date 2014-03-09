@@ -57,18 +57,18 @@ public class MainActivity extends Activity {
         		getResources().getString(R.string.hours5), getResources().getString(R.string.email5),
         		getResources().getString(R.string.phone5));
         
-        dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.pet_dog1, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        dog2 = new Pet("dog 2", shelter2, 3, pet1photos, R.drawable.pet_dog2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        dog3 = new Pet("dog 2", shelter3, 1, pet1photos, R.drawable.pet_dog3, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        dog4 = new Pet("pet 1", shelter4, 2, pet1photos, R.drawable.pet_dog4, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        dog5 = new Pet("dog 2", shelter5, 3, pet1photos, R.drawable.pet_dog5, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        dog6 = new Pet("dog 2", shelter1, 1, pet1photos, R.drawable.pet_dog6, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        pet1 = new Pet("pet 1", shelter2, 2, pet2photos, R.drawable.pet_1, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        pet2 = new Pet("dog 2", shelter3, 3, pet1photos, R.drawable.pet_2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        pet3 = new Pet("dog 2", shelter4, 1, pet1photos, R.drawable.pet_3, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        pet4 = new Pet("pet 1", shelter5, 2, pet1photos, R.drawable.pet_4, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        pet5 = new Pet("dog 2", shelter1, 3, pet1photos, R.drawable.pet_5, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
-        pet6 = new Pet("dog 2", shelter2, 1, pet1photos, R.drawable.pet_6, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog1 = new Pet("YorkShire Terrier", shelter1, 2, pet1photos, R.drawable.pet_dog1, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog2 = new Pet("YorkShire Terrier", shelter2, 3, pet1photos, R.drawable.pet_dog2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog3 = new Pet("YorkShire Terrier", shelter3, 1, pet1photos, R.drawable.pet_dog3, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog4 = new Pet("Belgian Hare", shelter4, 2, pet1photos, R.drawable.pet_dog4, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog5 = new Pet("YorkShire Terrier", shelter5, 3, pet1photos, R.drawable.pet_dog5, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        dog6 = new Pet("YorkShire Terrier", shelter1, 1, pet1photos, R.drawable.pet_dog6, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet1 = new Pet("Belgian Hare", shelter2, 2, pet2photos, R.drawable.pet_1, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet2 = new Pet("YorkShire Terrier", shelter3, 3, pet1photos, R.drawable.pet_2, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet3 = new Pet("YorkShire Terrier", shelter4, 1, pet1photos, R.drawable.pet_3, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet4 = new Pet("Belgian Hare", shelter5, 2, pet1photos, R.drawable.pet_4, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet5 = new Pet("YorkShire Terrier", shelter1, 3, pet1photos, R.drawable.pet_5, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
+        pet6 = new Pet("YorkShire Terrier", shelter2, 1, pet1photos, R.drawable.pet_6, "android.resource://" + getPackageName() + "/" + R.raw.dog_video);
         
         //Add the pets and dogs here
         allPets.add(pet1);
