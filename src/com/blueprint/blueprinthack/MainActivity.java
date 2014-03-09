@@ -41,17 +41,13 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-<<<<<<< HEAD
-    
+
     private int[] pet1photos = { R.drawable.sample_2, R.drawable.sample_3, R.drawable.sample_4 };
     Shelter shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
     Pet dog1 = new Pet("dog 1", shelter1, 2, pet1photos, R.drawable.sample_1, "android.resource://" + getPackageName() + "/" 
     		+ R.raw.dog_video);
     private Pet[] allPets = {dog1, dog1, dog1, dog1};
     private Pet[] dogs = {};
-    
-    
-=======
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
@@ -72,5 +68,4 @@ public class MainActivity extends Activity {
         }
         return true;
     }
->>>>>>> 58aff39fc668f187dbca64ccd61dc7bbf8891994
 }
