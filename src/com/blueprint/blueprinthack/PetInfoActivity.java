@@ -2,6 +2,7 @@ package com.blueprint.blueprinthack;
 
 import com.facebook.Session;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -29,7 +30,7 @@ public class PetInfoActivity extends Activity {
 	Context c;
 	private TextView breed, shelter, age;
 	private int[] photos;
-	private Button videoButton;
+	private Button videoButton, adoptButton;
 	private Gallery gallery;
 	private int width, height;
 	
@@ -45,6 +46,7 @@ public class PetInfoActivity extends Activity {
         shelter = (TextView) findViewById(R.id.tvShelter);
         age = (TextView) findViewById(R.id.tvAge);
         videoButton = (Button) findViewById(R.id.play_video);
+        adoptButton = (Button) findViewById(R.id.adopt_button);
         gallery = (Gallery) findViewById(R.id.pet_gallery);
         
         Bundle b = getIntent().getExtras(); 
@@ -78,6 +80,15 @@ public class PetInfoActivity extends Activity {
 //				startActivity(openVideo);
 				startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.youtube.com/watch?v=ofeynC2SAXg")));
 			    System.out.println("Video Playing....");
+			}
+        });
+        
+        adoptButton.setOnClickListener(new OnClickListener(){
+        	@Override
+			public void onClick(View arg0) {
+        		Intent openShelterInfo = new Intent(c, ShelterActivity.class);
+            	openShelterInfo.putExtra("shelter", pet.getShelter());
+            	startActivity(openShelterInfo);
 			}
         });
     }

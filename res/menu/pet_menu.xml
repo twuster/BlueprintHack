@@ -1,9 +1,4 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item
-        android:id="@+id/action_adopt"
-        android:showAsAction="always"
-        android:title="@string/action_adopt"/>
-
 
 </menu>
