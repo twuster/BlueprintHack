@@ -78,10 +78,9 @@ public class ShelterActivity  extends Activity {
             @Override
             public void onClick(View v) {
                 FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(context)
-                        .setLink("https://www.calblueprint.org")
-                        .setName("WOW")
-                        .setCaption("I just adopted a pet :D")
-                        .setCaption("This app is amazing!")
+                        .setLink("http://www.calblueprint.org")
+                        .setName("WOW #pet++")
+                        .setCaption("I just adopted a pet! AMAZING")
                         .setPicture("http://imgur.com/cZT4JiY")
                         .build();
                 uiHelper.trackPendingDialogCall(shareDialog.present());
