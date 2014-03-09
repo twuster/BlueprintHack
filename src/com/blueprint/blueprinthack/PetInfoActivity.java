@@ -1,5 +1,7 @@
 package com.blueprint.blueprinthack;
 
+import com.facebook.Session;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +10,8 @@ import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -69,10 +73,34 @@ public class PetInfoActivity extends Activity {
         videoButton.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
-				Intent openVideo = new Intent(c, PetVideo.class);
-				openVideo.putExtra("videoURI", pet.getVideo());
-				startActivity(openVideo);
+//				Intent openVideo = new Intent(c, PetVideo.class);
+//				openVideo.putExtra("videoURI", pet.getVideo());
+//				startActivity(openVideo);
+				startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.youtube.com/watch?v=ofeynC2SAXg")));
+			    System.out.println("Video Playing....");
 			}
         });
+    }
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.pet_menu, menu);
+		return true;
+	}
+	
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent i;
+        switch(item.getItemId()){
+            case(R.id.action_adopt):
+            	Intent openShelterInfo = new Intent(c, PetInfoActivity.class);
+            	openShelterInfo.putExtra("shelter", pet.getShelter());
+            	startActivity(openShelterInfo);
+                break;
+            default:
+                break;
+        }
+        return true;
     }
 }

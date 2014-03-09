@@ -41,7 +41,7 @@ public class GalleryImageAdapter extends BaseAdapter
         ImageView i = new ImageView(mContext);
 
         i.setImageResource(petImages[index]);
-        i.setLayoutParams(new Gallery.LayoutParams(width, width));
+        i.setLayoutParams(new Gallery.LayoutParams(width, width*3/4+10));
     
         i.setScaleType(ImageView.ScaleType.FIT_XY);
 

@@ -48,6 +48,12 @@ public class MainActivity extends Activity {
         allPets.add(dog1);
         allPets.add(dog2);
         allPets.add(dog3);
+        allPets.add(dog1);
+        allPets.add(dog2);
+        allPets.add(dog3);
+        allPets.add(dog1);
+        allPets.add(dog2);
+        allPets.add(dog3);
         dogs.add(dog1);
         dogs.add(dog2);
         dogs.add(dog3);
@@ -55,11 +61,11 @@ public class MainActivity extends Activity {
         GridView gridview = (GridView) findViewById(R.id.gridview);
         Pet[] allPetsArray = new Pet[allPets.size()];
         allPetsArray = allPets.toArray(allPetsArray);
-        gridview.setAdapter(new PetAdapter(this, allPetsArray, width/2));
+        gridview.setAdapter(new PetAdapter(this, allPetsArray, (width)/2));
 
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
                 
                 Intent openPetInfo = new Intent(c, PetInfoActivity.class);
                 openPetInfo.putExtra("pet", allPets.get(position));
@@ -75,8 +81,6 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
