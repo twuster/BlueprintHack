@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="pp_red">#e45959</color>
+    <color name="pp_red_pressed">#ff833333</color>
+    <color name="facebook_blue">#4C66A4</color>
+    <color name="facebook_blue_pressed">#284074</color>
+    <color name="white">#FFFFFF</color>
+
+
 </resources>

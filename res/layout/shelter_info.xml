@@ -80,16 +80,20 @@
 
     <Button
             android:id="@+id/directions_button"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:text="Get Directions"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:background="@drawable/pink_button"
+            android:textColor="@color/white"/>
     <Button
             android:id="@+id/fb_button"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:text = "Share"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/blue_button"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
     

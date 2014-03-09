@@ -92,10 +92,11 @@
 
             <Button
                 android:id="@+id/play_video"
-                android:layout_width="wrap_content"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:text="Play Video"
-                android:textSize="12sp" />
+                android:background="@drawable/pink_button"
+                android:textColor="@color/white"/>
             
         </LinearLayout>
     </ScrollView>
