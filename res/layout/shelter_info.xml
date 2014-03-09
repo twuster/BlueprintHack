@@ -2,10 +2,71 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin" >
+    android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/name"
+        style="@style/BlackTextBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yorkshire Terrier"/>
+
+    <Button
+        android:id="@+id/directions_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Directions" />
+    <TextView
+            android:id="@+id/address"
+            style="@style/BlackTextBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address: " />
+    <TextView
+            android:id="@+id/address_field"
+            style="@style/DarkGrayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wozniak Lounge" />
+
+    <TextView
+        android:id="@+id/hours"
+        style="@style/BlackTextBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hours: " />
+    <TextView
+            android:id="@+id/hours_field"
+            style="@style/DarkGrayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9AM - 10AM" />
+
+    <TextView
+            android:id="@+id/contact"
+            style="@style/BlackTextBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Information:" />
+    <TextView
+        android:id="@+id/contact_phone"
+        style="@style/DarkGrayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="911" />
+
+    <TextView
+        android:id="@+id/contact_email"
+        style="@style/DarkGrayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calblueprint@gmail.com" />
+
+    
+	<Button
+        android:id="@+id/fb_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Share"/>
+    
 </LinearLayout>

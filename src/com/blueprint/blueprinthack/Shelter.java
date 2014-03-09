@@ -11,6 +11,7 @@ public class Shelter implements Parcelable {
 	private String email;
 	private String phone;
 	
+
 	public Shelter (String name, String address, String hours, String email, String phone){
 		this.name = name;
 		this.address = address;
@@ -18,25 +19,26 @@ public class Shelter implements Parcelable {
 		this.email = email;
 		this.phone = phone;
 	}
+
 	
 	public String getName(){
-		return name;
+		return this.name;
 	}
 	
 	public String getAddress(){
-		return address;
+		return this.address;
 	}
 	
 	public String getHours(){
-		return hours;
+		return this.hours;
 	}
 	
 	public String getEmail(){
-		return email;
+		return this.email;
 	}
 	
 	public String getPhone(){
-		return phone;
+		return this.phone;
 	}
 
 	@Override
