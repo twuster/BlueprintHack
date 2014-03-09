@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">BlueprintHack</string>
     <string name="action_search">Search</string>
+    <string name="action_login">Login</string>
+    <string name="app_id">379882218821210</string>
 </resources>

@@ -3,8 +3,9 @@ package com.blueprint.blueprinthack;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
@@ -39,6 +40,7 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+<<<<<<< HEAD
     
     private int[] pet1photos = { R.drawable.sample_2, R.drawable.sample_3, R.drawable.sample_4 };
     Shelter shelter1 = new Shelter("Shelter 1", "123 Pet Avenue", "Mon-Fri 9am-5pm", "pet@gmail.com", "123-456-7890");
@@ -48,4 +50,17 @@ public class MainActivity extends Activity {
     private Pet[] dogs = {};
     
     
+=======
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case(R.id.action_login):
+                Intent i = new Intent(this,LoginActivity.class);
+                this.startActivity(i);
+                break;
+        }
+        return true;
+    }
+>>>>>>> 58aff39fc668f187dbca64ccd61dc7bbf8891994
 }
