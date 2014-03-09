@@ -1,8 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
+2045 Woodard Road, San Jose, CA 951242045 Woodard Road, San Jose, CA 951242045 Woodard Road, San Jose, CA 95124408-227-2273281-339-2086<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BlueprintHack</string>
     <string name="action_search">Search</string>
     <string name="action_login">Login</string>
     <string name="action_logout">Logout</string>
     <string name="app_id">379882218821210</string>
+    <string name="shelter1">C.A.R.E.</string>
+    <string name="address1">2045 Woodard Road, San Jose, CA 95124</string>
+    <string name="hours1">Every Saturday, 1pm-4pm</string>
+    <string name="email1">care@carepets.org</string>
+    <string name="phone1">408-227-2273</string>
+    <string name="shelter2">Rocket Dog Rescue</string>
+    <string name="address2">3160 20th Avenue, San Francisco, CA 94146</string>
+    <string name="hours2">Every Sunday, 12pm-5pm</string>
+    <string name="email2">adopt@rocketdogrescue.org</string>
+    <string name="phone2">415-756-8188</string>
+    <string name="shelter3">Bay Area Pet Adoptions</string>
+    <string name="address3">3000 Avenue R, San Leon, TX 77539</string>
+    <string name="hours3">11am-5pm daily (closed on Wed)</string>
+    <string name="email3">info@bayareapetadoptions.org</string>
+    <string name="phone3">281-339-2086</string>
+    <string name="shelter4">Norcal Pet Adoptions</string>
+    <string name="address4">500 85th Avenue, Oakland, CA 94621</string>
+    <string name="hours4">11am-3pm daily</string>
+    <string name="email4">info@norcalpetadopt.org</string>
+    <string name="phone4">510-924-3300</string>
+    <string name="shelter5">Furry Friends Rescue</string>
+    <string name="address5">39010 Paseo Padre Parkway, Fremont, CA 94537</string>
+    <string name="hours5">Weekdays, 9am-3pm </string>
+    <string name="email5">info@furryfriendsrescue.org</string>
+    <string name="phone5">510-794-4703</string>
 </resources>
