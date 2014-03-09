@@ -21,7 +21,7 @@ public class PetInfoActivity extends Activity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.pet_info);
         
         breed = (TextView) findViewById(R.id.tvBreed);
         shelter = (TextView) findViewById(R.id.tvShelter);
@@ -29,10 +29,22 @@ public class PetInfoActivity extends Activity {
         video = (VideoView) findViewById(R.id.pet_video);
         gallery = (Gallery) findViewById(R.id.pet_gallery);
         
-        Pet pet = (Pet)getIntent().getExtras().get("pet");
+        Bundle b = getIntent().getExtras(); 
+        Pet pet = b.getParcelable("pet");
+        
         breed.setText(pet.getBreed());
         shelter.setText(pet.getBreed());
         age.setText(pet.getAge()+"");
+        
+        gallery.setSpacing(1);
+        gallery.setAdapter(new GalleryImageAdapter(this, pet.getPhotos()));
+
+         // clicklistener for Gallery
+        gallery.setOnItemClickListener(new OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                Toast.makeText(PetInfoActivity.this, "Your selected position = " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
         
     }
 }
