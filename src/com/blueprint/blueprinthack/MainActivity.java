@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.Toast;
+import com.facebook.Session;
 
 public class MainActivity extends Activity {
     /**
@@ -39,10 +40,19 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+        Intent i;
         switch(item.getItemId()){
             case(R.id.action_login):
-                Intent i = new Intent(this,LoginActivity.class);
+                i = new Intent(this,LoginActivity.class);
                 this.startActivity(i);
+                break;
+            case(R.id.action_logout):
+                Session session = Session.getActiveSession();
+                session.closeAndClearTokenInformation();
+                i = new Intent(this, LoginActivity.class);
+                this.startActivity(i);
+                break;
+            default:
                 break;
         }
         return true;
