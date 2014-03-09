@@ -19,8 +19,8 @@ public class MainActivity extends Activity {
     private int[] pet1photos = { R.drawable.sample_2, R.drawable.sample_3, R.drawable.sample_4 };
     Shelter shelter1;
     Pet dog1;
-    private ArrayList<Pet> allPets;
-    private ArrayList<Pet> dogs;
+    private ArrayList<Pet> allPets = new ArrayList<Pet>();
+    private ArrayList<Pet> dogs = new ArrayList<Pet>();
     /**
      * Called when the activity is first created.
      */
