@@ -35,7 +35,7 @@ public class PetAdapter extends BaseAdapter {
 									// attributes
 			imageView = new ImageView(mContext);
 			//Change Image Dimension here
-			imageView.setLayoutParams(new GridView.LayoutParams(100, 100));
+			imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
 			imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 			imageView.setPadding(8, 8, 8, 8);
 		} else {
