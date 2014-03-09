@@ -37,7 +37,9 @@ public class MainActivity extends Activity {
         dogs.add(dog1);
         
         GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new PetAdapter(this, (Pet[])allPets.toArray()));
+        Pet[] allPetsArray = new Pet[allPets.size()];
+        allPetsArray = allPets.toArray(allPetsArray);
+        gridview.setAdapter(new PetAdapter(this, allPetsArray));
 
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
