@@ -8,5 +8,9 @@
         android:id="@+id/action_login"
         android:showAsAction="always"
         android:title="@string/action_login"/>
+    <item
+        android:id="@+id/action_logout"
+        android:showAsAction="always"
+        android:title="@string/action_logout"/>
 
 </menu>

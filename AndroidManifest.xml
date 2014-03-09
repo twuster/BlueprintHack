@@ -11,16 +11,12 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
-        <activity android:name="MainActivity"
-                  android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+        <activity android:name="MainActivity">
         </activity>
         <activity
             android:name="PetInfoActivity"
             android:label="@string/app_name" >
+<<<<<<< HEAD
             <intent-filter>
                 <action android:name="com.blueprint.blueprinthack.PetInfoActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -29,6 +25,21 @@
         <activity
                 android:name="com.facebook.LoginActivity"
                 android:theme="@android:style/Theme.NoTitleBar">>
+=======
+            </activity>
+        <activity
+                android:name="LoginActivity"
+                android:theme="@android:style/Theme.NoTitleBar"
+                android:label="@string/app_name">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN"/>
+                    <category android:name="android.intent.category.LAUNCHER"/>
+                </intent-filter>
+        </activity>
+        <activity
+                android:name="com.facebook.LoginActivity"
+                android:theme="@android:style/Theme.NoTitleBar">
+>>>>>>> 00597e07a472258b4615f7d72b97bc585b468c01
         </activity>
     </application>
 </manifest>

@@ -68,6 +68,10 @@ public class FacebookLoginFragment extends Fragment {
         }
 
         uiHelper.onResume();
+        if (isLoggedIn()){
+            Intent i = new Intent(getActivity(), MainActivity.class);
+            this.startActivity(i);
+        }
     }
 
     @Override
@@ -92,5 +96,14 @@ public class FacebookLoginFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         uiHelper.onSaveInstanceState(outState);
+    }
+
+    public boolean isLoggedIn() {
+        Session session = Session.getActiveSession();
+        if (session != null && session.isOpened()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
