@@ -1,6 +1,7 @@
 package com.blueprint.blueprinthack;
 
 import android.app.Activity;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.SearchView;
 import android.widget.Toast;
 import com.facebook.Session;
 
@@ -103,13 +105,66 @@ public class MainActivity extends Activity {
                 startActivity(openPetInfo);
             }
         });
+        
+        handleIntent(getIntent());
+    }
+    
+//    @Override
+//    protected void onNewIntent(Intent intent) {
+//        handleIntent(intent);
+//    }
+    
+    private void handleIntent(Intent intent) {
 
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            System.out.println("query: " + query);
+            if(query.equals("dog")){
+            	System.out.println("changing grid to dogs");
+            	Pet[] dogsArray = new Pet[dogs.size()];
+                dogsArray = dogs.toArray(dogsArray);
+                GridView gridview = (GridView) findViewById(R.id.gridview);
+                gridview.setAdapter(new PetAdapter(this, dogsArray, (width)/2));
+
+                gridview.setOnItemClickListener(new OnItemClickListener() {
+                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                        //Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+                        
+                        Intent openPetInfo = new Intent(c, PetInfoActivity.class);
+                        openPetInfo.putExtra("pet", dogs.get(position));
+                        startActivity(openPetInfo);
+                    }
+                });
+            }else{
+//            	GridView gridview = (GridView) findViewById(R.id.gridview);
+//                Pet[] allPetsArray = new Pet[allPets.size()];
+//                allPetsArray = allPets.toArray(allPetsArray);
+//                gridview.setAdapter(new PetAdapter(this, allPetsArray, (width)/2));
+//
+//                gridview.setOnItemClickListener(new OnItemClickListener() {
+//                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+//                        //Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+//                        
+//                        Intent openPetInfo = new Intent(c, PetInfoActivity.class);
+//                        openPetInfo.putExtra("pet", allPets.get(position));
+//                        startActivity(openPetInfo);
+//                    }
+//                });
+            }
+        }
     }
     
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		// Associate searchable configuration with the SearchView
+	    SearchManager searchManager =
+	           (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+	    SearchView searchView =
+	            (SearchView) menu.findItem(R.id.action_search).getActionView();
+	    searchView.setSearchableInfo(
+	            searchManager.getSearchableInfo(getComponentName()));
 		return true;
 	}
 
