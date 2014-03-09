@@ -1,12 +1,10 @@
 package com.blueprint.blueprinthack;
 
-import com.facebook.Session;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PixelFormat;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Display;
@@ -14,36 +12,45 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.Gallery;
-import android.widget.GridView;
-import android.widget.MediaController;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.VideoView;
 
 public class PetInfoActivity extends Activity {
 	
 	Context c;
-	private TextView breed, shelter, age;
+	private TextView breed, shelter, age, videoTitle, breedTitle, shelterTitle, ageTitle;
 	private int[] photos;
 	private Button videoButton;
 	private Gallery gallery;
 	private int width, height;
-	
-	private Pet pet;
+    Typeface myTypeface;
+
+
+    private Pet pet;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pet_info);
         c = getApplicationContext();
+
+        myTypeface = Typeface.createFromAsset(getAssets(), "fonts/oregano.ttf");
         
         breed = (TextView) findViewById(R.id.tvBreed);
+        breed.setTypeface(myTypeface);
         shelter = (TextView) findViewById(R.id.tvShelter);
+        shelter.setTypeface(myTypeface);
         age = (TextView) findViewById(R.id.tvAge);
+        age.setTypeface(myTypeface);
+        videoTitle = (TextView) findViewById(R.id.video);
+        videoTitle.setTypeface(myTypeface);
+        breedTitle = (TextView) findViewById(R.id.breed);
+        breedTitle.setTypeface(myTypeface);
+        shelterTitle = (TextView) findViewById(R.id.shelter);
+        shelterTitle.setTypeface(myTypeface);
+        ageTitle = (TextView) findViewById(R.id.age);
+        ageTitle.setTypeface(myTypeface);
+
         videoButton = (Button) findViewById(R.id.play_video);
         gallery = (Gallery) findViewById(R.id.pet_gallery);
         
@@ -51,7 +58,7 @@ public class PetInfoActivity extends Activity {
         pet = b.getParcelable("pet");
         
         breed.setText(pet.getBreed());
-        shelter.setText(pet.getBreed());
+        shelter.setText(pet.getShelter().getName());
         age.setText(pet.getAge()+"");
         
         Display display = getWindowManager().getDefaultDisplay();
