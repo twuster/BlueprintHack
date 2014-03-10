@@ -1,12 +1,16 @@
 package com.blueprint.blueprinthack;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
@@ -18,6 +22,8 @@ import java.util.Arrays;
  * Created by tony on 3/8/14.
  */
 public class FacebookLoginFragment extends Fragment {
+	
+	Context c;
 
     private static final String TAG = "FacebookLoginFragment";
     private Session.StatusCallback callback = new Session.StatusCallback() {
@@ -36,16 +42,25 @@ public class FacebookLoginFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.facebook_login, container, false);
+        c = view.getContext();
+               
         LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
         authButton.setFragment(this);
         authButton.setPublishPermissions(Arrays.asList("publish_stream"));
-
+        
+        TextView skip = (TextView) view.findViewById(R.id.skip_button);
+        skip.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				Intent openHome = new Intent(c, MainActivity.class);
+                startActivity(openHome);
+			}
+        });
         return view;
     }
+    
 
     private void onSessionStateChange(Session session, SessionState state, Exception exception) {
         if (state.isOpened()) {
@@ -63,14 +78,13 @@ public class FacebookLoginFragment extends Fragment {
         // may not be triggered. Trigger it if it's open/closed.
         Session session = Session.getActiveSession();
         if (session != null &&
-                (session.isOpened() || session.isClosed()) ) {
+               (session.isOpened() || session.isClosed()) ) {
             onSessionStateChange(session, session.getState(), null);
         }
-        System.out.println("before");
         uiHelper.onResume();
+        
         if (isLoggedIn()){
             Intent i = new Intent(getActivity(), MainActivity.class);
-            System.out.println("after");
             this.startActivity(i);
         }
         

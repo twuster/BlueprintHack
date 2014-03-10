@@ -101,26 +101,5 @@ public class PetInfoActivity extends Activity {
 			}
         });
     }
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.pet_menu, menu);
-		return true;
-	}
-	
-	@Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        Intent i;
-        switch(item.getItemId()){
-            case(R.id.action_adopt):
-            	Intent openShelterInfo = new Intent(c, ShelterActivity.class);
-            	openShelterInfo.putExtra("shelter", pet.getShelter());
-            	startActivity(openShelterInfo);
-                break;
-            default:
-                break;
-        }
-        return true;
-    }
+
 }

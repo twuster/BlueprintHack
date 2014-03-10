@@ -13,12 +13,11 @@
         style="@style/BlackTextBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
         android:text="Shelter Name"
-        android:layout_gravity="center_horizontal"
-        android:textSize="30sp"
-        android:paddingBottom="15dp"
-        android:paddingTop = "20dp"/>
-
+        android:textSize="30sp" />
 
     <TextView
             android:id="@+id/address"
@@ -73,27 +72,40 @@
         android:paddingBottom="25dp"
         android:paddingLeft="10dp"/>
 
-    <LinearLayout android:layout_width="fill_parent"
-                  android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="10" >
 
     <Button
-            android:id="@+id/directions_button"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:text="Get Directions"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/pink_button"
-            android:textColor="@color/white"/>
+        android:id="@+id/directions_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_weight="5"
+        android:background="@drawable/pink_button"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Get Directions"
+        android:textColor="@color/white" />
+
     <Button
-            android:id="@+id/fb_button"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:text = "Share"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/blue_button"
-            android:textColor="@color/white"/>
+        android:id="@+id/fb_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="5"
+        android:background="@drawable/blue_button"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Share"
+        android:textColor="@color/white" />
 
     </LinearLayout>
     

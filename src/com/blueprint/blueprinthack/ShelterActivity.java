@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
@@ -81,7 +83,7 @@ public class ShelterActivity  extends Activity {
                         .setLink("http://www.calblueprint.org")
                         .setName("WOW #pet++")
                         .setCaption("I just adopted a pet! AMAZING")
-                        .setPicture("http://imgur.com/cZT4JiY")
+                        .setPicture("http://i.imgur.com/cZT4JiY.jpg")
                         .build();
                 uiHelper.trackPendingDialogCall(shareDialog.present());
             }
@@ -101,6 +103,7 @@ public class ShelterActivity  extends Activity {
             @Override
             public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
                 Log.i("Activity", "Success!");
+                Toast.makeText(ShelterActivity.this, "Share Success!", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -72,6 +72,10 @@ public class MainActivity extends Activity {
         
         //Add the pets and dogs here
         allPets.add(pet1);
+        allPets.add(dog3);
+        allPets.add(dog4);
+        allPets.add(dog6);
+        allPets.add(pet5);
         allPets.add(dog1);
         allPets.add(pet2);
         allPets.add(pet6);
@@ -134,21 +138,6 @@ public class MainActivity extends Activity {
                         startActivity(openPetInfo);
                     }
                 });
-            }else{
-//            	GridView gridview = (GridView) findViewById(R.id.gridview);
-//                Pet[] allPetsArray = new Pet[allPets.size()];
-//                allPetsArray = allPets.toArray(allPetsArray);
-//                gridview.setAdapter(new PetAdapter(this, allPetsArray, (width)/2));
-//
-//                gridview.setOnItemClickListener(new OnItemClickListener() {
-//                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-//                        //Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
-//                        
-//                        Intent openPetInfo = new Intent(c, PetInfoActivity.class);
-//                        openPetInfo.putExtra("pet", allPets.get(position));
-//                        startActivity(openPetInfo);
-//                    }
-//                });
             }
         }
     }
@@ -158,12 +147,9 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		// Associate searchable configuration with the SearchView
-	    SearchManager searchManager =
-	           (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-	    SearchView searchView =
-	            (SearchView) menu.findItem(R.id.action_search).getActionView();
-	    searchView.setSearchableInfo(
-                searchManager.getSearchableInfo(getComponentName()));
+	    SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+	    SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+	    searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 		return true;
 	}
 
